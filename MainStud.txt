@@ -1,0 +1,19 @@
+package com.stud;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainStud {
+
+	public static void main(String[] args) {
+		ApplicationContext studcontext = new ClassPathXmlApplicationContext("com/stud/Studconfig.xml");
+		StudentDetails st = (StudentDetails) studcontext.getBean("Stu1");
+		System.out.println(st.getStud_id());
+		System.out.println(st.getSubjects());
+		System.out.println(st.getSub_marks());
+		System.out.println(st.getPhones());
+		System.out.println(st.getParents());
+		System.out.println(st);
+	}
+
+}

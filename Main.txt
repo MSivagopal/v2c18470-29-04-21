@@ -1,0 +1,20 @@
+package com.emp;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext empcontext = new ClassPathXmlApplicationContext("com/emp/Empconfig.xml");
+		EmpDetails et = (EmpDetails) empcontext.getBean("Emp1");
+		System.out.println(et.getEmpid());
+		System.out.println(et.getEmpname());
+		System.out.println(et.getEmpaddress().getCity());
+		System.out.println(et.getEmpaddress().getStreet());
+		System.out.println(et.getEmpaddress().getPincode());
+		System.out.println(et);
+
+	}
+
+}

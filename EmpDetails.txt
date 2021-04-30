@@ -1,0 +1,43 @@
+package com.emp;
+
+public class EmpDetails{
+	
+	private int Empid;
+	private String  Empname;
+	private Address  Empaddress;
+	public int getEmpid() {
+		return Empid;
+	}
+	public void setEmpid(int empid) {
+		Empid = empid;
+	}
+	public String getEmpname() {
+		return Empname;
+	}
+	public void setEmpname(String empname) {
+		Empname = empname;
+	}
+	public Address getEmpaddress() {
+		return Empaddress;
+	}
+	public void setEmpaddress(Address empaddress) {
+		Empaddress = empaddress;
+	}
+	public EmpDetails(int empid, String empname, Address empaddress) {
+		super();
+		Empid = empid;
+		Empname = empname;
+		Empaddress = empaddress;
+	}
+	public EmpDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "EmpDetails [Empid=" + Empid + ", Empname=" + Empname + ", Empaddress=" + Empaddress + "]";
+	}
+	
+	
+	
+}
